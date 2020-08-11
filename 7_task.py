@@ -22,6 +22,6 @@ for i in eratoshenes(1000000):
         if count < 10001:
             number = i
             count += 1
-print(number, count)
+print(number, count) # 104743 10001
 
 
