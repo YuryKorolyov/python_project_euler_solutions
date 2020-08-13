@@ -7,16 +7,33 @@
 
 
 def fib_number(number):
-    fib1 = 0
-    fib2 = 1
-    if number == 1:
+    fib0 = 0
+    fib1 = 1
+    fib2 = 2
+    if number == 0:
+        return fib0
+    elif number == fib1:
         return fib1
-    elif number == 2:
+    elif number == fib2:
         return fib2
     else:
         for i in range(number):
-            fn = fib1 + fib2
-            fib1, fib2 = fib2, fn
+            fn = fib0 + fib1
+            fib0, fib1 = fib1, fn
         return fn
 
-print(fib_number())
+def sum_of_fib_numbers(x):
+    sum = 0
+    fn = 0
+    i = 1
+    while fn < x:
+        fn = fib_number(i)
+        if fn < x:
+            i+=1
+        else:
+            break
+        if fn % 2 == 0:
+            sum+=fn
+    return sum
+
+print(sum_of_fib_numbers(4000000)) # 4613732
