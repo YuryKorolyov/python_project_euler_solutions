@@ -21,4 +21,4 @@ def sum_of_primes(number):
         sum+=i
     return sum
 
-print(sum_of_primes(2000000))
+print(sum_of_primes(2000000)) # 142913828922
